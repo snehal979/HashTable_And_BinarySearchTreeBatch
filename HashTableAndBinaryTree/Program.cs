@@ -8,7 +8,7 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Hint 1.Add Data 2.Exist");
+                Console.WriteLine("Hint 1.FindFequencyIn Sentence 2.FindFequencyParagraph3.Exist");
                 int choice = Convert.ToInt16(Console.ReadLine());
                 switch (choice)
                 {
@@ -17,13 +17,15 @@
                         CountNumbOfOccurence(para);
                         break;
                     case 2:
+                        string paragraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+                        CountNumbOfOccurence(paragraph);
+                        break;
+                    case 3:
                         flag =false;
                         Console.WriteLine("Exist");
                         break;
                 }
-
             }
-
         }
         public static void CountNumbOfOccurence(string paragraph)
         {
