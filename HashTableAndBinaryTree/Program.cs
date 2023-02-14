@@ -1,4 +1,6 @@
-﻿namespace HashTableAndBinaryTree
+﻿using System.Xml.Linq;
+
+namespace HashTableAndBinaryTree
 {
     class Program
     {
@@ -14,7 +16,7 @@
             while (flag)
             {
                 Console.WriteLine("Hint 1.FindFequencyIn Sentence 2.FindFequencyParagraph 3.Remove Word \n" +
-                    "4BinaryInsert data 5.BinaryTree Diagram 6.Exist");
+                    "4BinaryInsert data 5.BinaryTree Diagram 6.Search element in BTS 7.Exist");
                 int choice = Convert.ToInt16(Console.ReadLine());
                 switch (choice)
                 {
@@ -58,11 +60,15 @@
 
                         myBinaryNode.InOrderTraversal(myBinaryNode.midRoot);
                         Console.WriteLine("------PreOrderTraversal---------");
-                        myBinaryNode.PreOrderTraversal(myBinaryNode.midRoot);
-                        Console.WriteLine("----PostOrderTraversal--------");
-                        myBinaryNode.PostOrderTraversal(myBinaryNode.midRoot);
+                        //myBinaryNode.PreOrderTraversal(myBinaryNode.midRoot);
+                        //Console.WriteLine("----PostOrderTraversal--------");
+                        //myBinaryNode.PostOrderTraversal(myBinaryNode.midRoot);
                         break;
                     case 6:
+                        //Section 4-BTS UC3 -Search left or right nodes to find 63
+                        myBinaryNode.Search(63);
+                        break;
+                    case 7:
                         flag =false;
                         Console.WriteLine("Exist");
                         break;

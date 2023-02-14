@@ -80,5 +80,32 @@ namespace HashTableAndBinaryTree
                 Console.WriteLine(paraent.data);
             }
         }
+        /// <summary>
+        /// Section 4_-BTS-Uc3 -Search left or right nodes to find 63
+        /// </summary>
+        /// <param name="data"></param>
+        public void Search(int data)
+        {
+            Node temp = this.midRoot;
+            if (temp == null)
+            {
+                Console.WriteLine("Not Found");
+            }
+            else
+            {
+                if (data == temp.data)
+                {
+                    Console.WriteLine("Data Found" +data);
+                }
+                else if (data < temp.data)
+                {
+                    Console.WriteLine("Found LeftSide "+data);
+                }
+                else
+                {
+                    Console.WriteLine("Found RightSide "+data);
+                }
+            }
+        }
     }
 }
