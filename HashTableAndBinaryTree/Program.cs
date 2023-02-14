@@ -5,6 +5,7 @@
         public static void Main(string[] args)
         {
             MyNodeClass<string, int> hashTabe = new MyNodeClass<string, int>(6);
+            MyBinaryNode myBinaryNode = new MyBinaryNode();
             string para = "To be or not to be";
             string paragraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
 
@@ -12,7 +13,8 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Hint 1.FindFequencyIn Sentence 2.FindFequencyParagraph 3.Remove Word 4.Exist");
+                Console.WriteLine("Hint 1.FindFequencyIn Sentence 2.FindFequencyParagraph 3.Remove Word \n" +
+                    "4BinaryInsert data 5.Exist");
                 int choice = Convert.ToInt16(Console.ReadLine());
                 switch (choice)
                 {
@@ -26,6 +28,18 @@
                         RemoveWord(paragraph, hashTabe);
                         break;
                     case 4:
+                        //Section 4 BTS //Uc1
+                        myBinaryNode.Insert(56); // as root value
+                        myBinaryNode.Insert(30);   // left handed
+                        myBinaryNode.Insert(70);   //right handed
+                        Console.WriteLine("---InOrderTraversal-----");
+                        myBinaryNode.InOrderTraversal(myBinaryNode.midRoot);
+                        Console.WriteLine("------PreOrderTraversal---------");
+                        myBinaryNode.PreOrderTraversal(myBinaryNode.midRoot);
+                        Console.WriteLine( "----PostOrderTraversal--------");
+                        myBinaryNode.PostOrderTraversal(myBinaryNode.midRoot);
+                        break;
+                    case 5:
                         flag =false;
                         Console.WriteLine("Exist");
                         break;
