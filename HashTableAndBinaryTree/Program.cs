@@ -14,7 +14,7 @@
             while (flag)
             {
                 Console.WriteLine("Hint 1.FindFequencyIn Sentence 2.FindFequencyParagraph 3.Remove Word \n" +
-                    "4BinaryInsert data 5.Exist");
+                    "4BinaryInsert data 5.BinaryTree Diagram 6.Exist");
                 int choice = Convert.ToInt16(Console.ReadLine());
                 switch (choice)
                 {
@@ -28,7 +28,7 @@
                         RemoveWord(paragraph, hashTabe);
                         break;
                     case 4:
-                        //Section 4 BTS //Uc1
+                        //Section 4 BTS //Uc1 Insert data
                         myBinaryNode.Insert(56); // as root value
                         myBinaryNode.Insert(30);   // left handed
                         myBinaryNode.Insert(70);   //right handed
@@ -40,6 +40,29 @@
                         myBinaryNode.PostOrderTraversal(myBinaryNode.midRoot);
                         break;
                     case 5:
+                        //Section 4-BTS-//Uc2 Binary Tree diagram
+                        myBinaryNode.Insert(56);
+                        myBinaryNode.Insert(30);
+                        myBinaryNode.Insert(70);
+                        myBinaryNode.Insert(22);
+                        myBinaryNode.Insert(40);
+                        myBinaryNode.Insert(60);
+                        myBinaryNode.Insert(95);
+                        myBinaryNode.Insert(11);
+                        myBinaryNode.Insert(3);
+                        myBinaryNode.Insert(16);
+                        myBinaryNode.Insert(65);
+                        myBinaryNode.Insert(63);
+                        myBinaryNode.Insert(67);
+                        //56,30,22.11,3,16,40,70,60,65,63,67,95
+
+                        myBinaryNode.InOrderTraversal(myBinaryNode.midRoot);
+                        Console.WriteLine("------PreOrderTraversal---------");
+                        myBinaryNode.PreOrderTraversal(myBinaryNode.midRoot);
+                        Console.WriteLine("----PostOrderTraversal--------");
+                        myBinaryNode.PostOrderTraversal(myBinaryNode.midRoot);
+                        break;
+                    case 6:
                         flag =false;
                         Console.WriteLine("Exist");
                         break;
